@@ -6,10 +6,9 @@ export interface IUserRespond {
   isWorkNow: boolean;
   email: string;
   username: string;
-  gender: string;
+  gender: 'F' | 'M';
   company: ICompany;
 }
-
 
 export interface IUser {
   id: string;
@@ -18,7 +17,7 @@ export interface IUser {
   isWorkNow: boolean;
   email: string;
   username: string;
-  gender: string;
+  gender: 'F' | 'M';
   company: ICompany;
 }
 
