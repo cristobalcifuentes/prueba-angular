@@ -5,24 +5,24 @@ import { UserDto } from './dto/user.dto';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
   @Get('users')
   getUsers(): User[] {
-    return this.appService.getHello();
+    return this.appService.getUsers();
   }
 
-  @Post('add')
-  createUser(@Body() createUser: UserDto) : any {
-    return {result: 'Ok', message: 'Usuario insertado con exito'};
+  @Post('users')
+  createUser(@Body() createUser: UserDto): any {
+    return { result: 'Ok', message: 'Usuario insertado con exito' };
   }
 
-  @Put('update/:id')
+  @Put('users/:id')
   update(@Param('id') id: string, @Body() updateUserDto: UserDto) {
     return `This action updates a #${id} user, body: ${updateUserDto.username}`;
   }
 
-  @Delete('delete/:id')
+  @Delete('users/:id')
   remove(@Param('id') id: string) {
     return `This action removes a #${id}`;
   }

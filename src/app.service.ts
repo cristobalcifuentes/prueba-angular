@@ -7,10 +7,10 @@ export class AppService {
 
   private users: User[];
 
-  constructor(){
+  constructor() {
     this.users = data as User[];
   }
-  getHello(): User[] {
+  getUsers(): User[] {
     return this.users;
   }
 }
