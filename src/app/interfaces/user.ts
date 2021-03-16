@@ -1,29 +1,29 @@
 
 export interface IUserRespond {
-  id: string;
+  id?: string;
   name: IName;
   age: number;
   isWorkNow: boolean;
   email: string;
-  username: string;
+  username?: string;
   gender: 'F' | 'M';
-  company: ICompany;
+  company?: ICompany;
 }
 
 export interface IUser {
-  id: string;
+  id?: string;
   name: string;
   age: number;
   isWorkNow: boolean;
   email: string;
-  username: string;
+  username?: string;
   gender: 'F' | 'M';
   company: ICompany;
 }
 
 export interface ICompany {
-  name: string;
-  years: number;
+  name?: string;
+  years?: number;
 }
 
 export interface IName {
