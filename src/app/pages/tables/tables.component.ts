@@ -22,8 +22,7 @@ export class TablesComponent implements OnInit{
 
   ngOnInit(){
     this.fetchUsers();
-    this.fetchUsersFemale();
-    this.fetchUsersMale();
+    this.fetchUsersForGender();
   }
 
   fetchUsers(){
@@ -37,7 +36,7 @@ export class TablesComponent implements OnInit{
     })
   }
 
-  fetchUsersFemale(){
+  fetchUsersForGender(){
 
     this.userService.getAllUsers()
     .subscribe( users =>{
@@ -46,22 +45,15 @@ export class TablesComponent implements OnInit{
           this.usersFemale.push(this.userService.transformIUserRespondToIUser(user));
           this.usersFemale.splice(10, 1);
         };
-      })
-    })
-  }
-
-  fetchUsersMale(){
-    this.userService.getAllUsers()
-    .subscribe( users =>{
-      users.forEach(user =>{
         if(user.gender==='M'){
           this.usersMale.push(this.userService.transformIUserRespondToIUser(user));
           this.usersMale.splice(10, 1);
         };
       })
     })
-    this.usersMale.splice(4, 1);
   }
+
+
 
 
 
