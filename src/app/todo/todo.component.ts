@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { ITodo } from '../interfaces/todo';
 
+
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent {
-
   constructor() {
-    alert(ErrorFalso)
+    console.log();
   }
+
 
   todos: ITodo[] = [
     { name: "Llenar dataTables", required: true, description: "abrir la ruta en el navegador 'table-user' y seguir TODOS ubicados en src/app/pages/tables/tables.component.ts" },
@@ -51,7 +52,7 @@ export class TodoComponent {
       name: "Editar formulario", required: true, description: `Se utilizará el mismo formulario de inserción para editar una persona,
      tendrás que utilizar también la interfaz IUserRespond, el id se tendrá que mandar a traves del body y como parametro en el mismo endpoint de inserción 'ENDPONINT/id' por método PUT` },
     {
-      name: "Deploy app BONUS", required: false, description: `Desplegar aplicación en cualquier tipo de hosting 
+      name: "Deploy app BONUS", required: false, description: `Desplegar aplicación en cualquier tipo de hosting
         (sugerencias (firebase, vercel, heroku, surge.sh, githubPages)). ESTA TAREA ES DE MÍNIMA PRIORIDAD Y NO NECESITAS GASTAR DINERO PARA DESPLEGAR`
     }
   ]
